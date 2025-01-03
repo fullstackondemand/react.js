@@ -8,4 +8,13 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: '_react/main.js',
+        assetFileNames: '_react/style.css',
+        chunkFileNames: `assets/[name].[ext]`,
+      }
+    }
+  }
 })
